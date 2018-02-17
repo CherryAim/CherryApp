@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context="kanokwan.androidthai.in.th.cherryapp.MainActivity">
 
+    <!--Wapaper-->
+    <ImageView
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <!--Content Fragment-->
 <FrameLayout
     android:id="@+id/contentMainFragment"
