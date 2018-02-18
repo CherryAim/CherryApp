@@ -10,11 +10,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 
 import kanokwan.androidthai.in.th.cherryapp.MainActivity;
 import kanokwan.androidthai.in.th.cherryapp.R;
 import kanokwan.androidthai.in.th.cherryapp.utility.MyAlert;
+import kanokwan.androidthai.in.th.cherryapp.utility.MyConstance;
+import kanokwan.androidthai.in.th.cherryapp.utility.PostDataToServer;
 
 /**
  * Created by MasterUNG on 2/17/2018.
@@ -60,9 +63,28 @@ public class RegisterFragment extends Fragment {
                             "Please Fill All Blank");
                 }else{
 //                    No Space
+                    try {
+                        MyConstance myConstance = new MyConstance();
+                        PostDataToServer postDataToServer = new PostDataToServer(getActivity());
+                        postDataToServer.execute(nameString, userStriing, passwordString,
+                                myConstance.getUrlPostData());
+
+                        if (Boolean.parseBoolean(postDataToServer.get())) {
+                            getActivity().getSupportFragmentManager().popBackStack();
+                        }else{
+                            Toast.makeText(getActivity(), "Cannot upolad value",
+                            Toast.LENGTH_SHORT).show();
+
+                        }
 
 
-                }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+
+
+                }//if
             }  //onClick
         });
     }// Main Method
