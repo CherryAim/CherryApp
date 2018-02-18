@@ -10,9 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"/>
 
-    <!--contesnt-->
+    <!--Content-->
     <LinearLayout
         android:background="#82ffffff"
+
         android:layout_margin="@dimen/my_margin"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -20,23 +21,26 @@
 
         <!--Name-->
         <LinearLayout
-           android:orientation="horizontal"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <!--Icon-->
             <ImageView
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_action_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <!--Text field-->
+
+            <!--TextField-->
             <EditText
-                android:hint="User: "
+                android:hint="Name :"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
+
         </LinearLayout>
+
         <!--User-->
         <LinearLayout
             android:orientation="horizontal"
@@ -45,17 +49,20 @@
 
             <!--Icon-->
             <ImageView
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_action_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <!--Text field-->
+
+            <!--TextField-->
             <EditText
-                android:hint="User: "
+                android:hint="User :"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
+
         </LinearLayout>
+
         <!--Password-->
         <LinearLayout
             android:orientation="horizontal"
@@ -64,26 +71,27 @@
 
             <!--Icon-->
             <ImageView
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_action_user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <!--Text field-->
+
+            <!--TextField-->
             <EditText
-                android:hint="User: "
+                android:hint="User :"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
+
         </LinearLayout>
+
         <!--Register Button-->
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
 
-
     </LinearLayout>
-
 
 
 
