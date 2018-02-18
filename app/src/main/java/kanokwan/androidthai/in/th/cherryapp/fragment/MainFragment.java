@@ -87,7 +87,7 @@ MainFragment extends Fragment{
 
 
                             }// if
-                        }//fore
+                        }//for
                         if (statusBoolen) {
                             myAlert.dialogNormal("User False",
                                     "No"  + userString + "in my Database");
@@ -96,6 +96,11 @@ MainFragment extends Fragment{
 
                             Toast.makeText(getActivity(),"Welcom"+ nameString,
                                     Toast.LENGTH_SHORT).show();
+                            getActivity().getSupportFragmentManager()
+                                    .beginTransaction()
+                                    .replace(R.id.contentMainFragment, ServiceFragment.serviceInstance(nameString))
+                                    .commit();
+
                         } else {
                             myAlert.dialogNormal("Password Falas",
                                     "Please Tray Again Passwrod False");
